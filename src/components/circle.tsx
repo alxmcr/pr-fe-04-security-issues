@@ -1,11 +1,11 @@
 
 
-interface BoxProps {
+interface CircleProps {
   bgColor?: string;
   color?: string;
 }
 
-export function Box({ bgColor = "red", color = "white" }: BoxProps) {
+export function Circle({ bgColor = "red", color = "white" }: CircleProps) {
   return (
     <div
       style={{
@@ -16,10 +16,10 @@ export function Box({ bgColor = "red", color = "white" }: BoxProps) {
         justifyContent: "center",
         width: "100px",
         height: "100px",
-        borderRadius: "8px",
+        borderRadius: "50%",
       }}
     >
-      Box
+      Circle
     </div>
   );
 }
