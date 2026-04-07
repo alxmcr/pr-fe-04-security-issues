@@ -22,7 +22,14 @@ jobs:
       - name: Run Socket Basics
         # Pin to a commit SHA for supply-chain safety.
         # Dependabot will keep this up to date automatically — see docs/github-action.md.
-        uses: SocketDev/socket-basics@<sha>  # v2.0.2
+        #
+        # https://github.com/SocketDev/socket-basics/blob/main/docs/github-action.md#pinning-strategies
+        #
+        # https://github.com/SocketDev/socket-basics/releases
+        #
+        # To find the SHA for a given version, you can use:
+        # git ls-remote https://github.com/SocketDev/socket-basics refs/tags/v2.0.0
+        uses: SocketDev/socket-basics@933940968bf73a35a63d5594e78a27d0b2a8c2d3  # v2.0.2
         env:
           GITHUB_PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
         with:
